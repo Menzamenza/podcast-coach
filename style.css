@@ -1,27 +1,50 @@
-*{
+ *{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
-    line-height: 1;
+    outline:1px solid red;
 }
 /* *************************left**************************** */
 .bordure{
     border-right: 2px solid;
 }
-.off{
-    margin: 15px 0;
-    width: 40px;
-    height: 20px;
-    border-radius: 20px;
-    background: rgb(192, 186, 186);
+.switch {
+	display: inline-block;
+	position: relative;
+	width: 40px;
+	height: 20px;
+	cursor: pointer;
 }
-.off .offe{
-    text-align: start;
-    margin: 2px;
-    width: 15px;
-    height: 15px;
-    background: #fff;
-    border-radius: 50%;
+.switch input{
+    display: none;
+}
+.switch input + span {
+    position: absolute;
+   top: 0;
+   bottom: 0;
+   left: 0;
+   right: 0;
+   background: #a4a8ae;
+   border-radius: 20px;
+}
+.switch input:checked + span {
+	background: #346abf;
+}
+.switch input + span:before {
+	content: "";
+	display: inline-block;
+	position: absolute;
+	top: 50%;
+	left: 3px;
+	width: 18px;
+	height: 18px;
+	background: white;
+	border-radius: 50%;
+	transform: translateY(-50%);
+	transition: all .3s;
+}
+.switch input:checked + span:before {
+	left: 19px;
 }
 /* ***************************************midlle********************************** */
 .rowe-flex{
@@ -54,10 +77,11 @@
     height: 5px;
     background: rgb(72, 72, 230);
 }
-
 /* *********************************************right***************************************** */
 .ptit{
-    width: 30px;
+    width: 20%;
+    border-radius:50px;
+    object-fit: cover;
 }
 .icone{
     position: relative;
@@ -69,6 +93,10 @@
 }
 .follow{
     background: lightskyblue;
+}
+.followe{
+    background: blue;
+    color:lightskyblue ;
 }
 .text-muted{
     font-size: 10px;
@@ -98,12 +126,18 @@
 .p{
     font-size: 10px;
 }
+.searc{
+    margin-top: 10px;
+}
 @media screen and (max-width:768px){
    .media{
     display: flex;
     flex-direction: column;
-    gap: 50px;
+    gap: 20px;
     align-items: center;
     justify-content: center;
+   }
+   .search{
+    margin-top: 0;
    }
 }
