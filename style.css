@@ -1,4 +1,4 @@
- *{
+*{
     box-sizing: border-box;
     margin: 0;
     padding: 0;
@@ -131,6 +131,10 @@
 }
 .searc{
     margin-top: 10px;
+}
+.gape{
+    display: flex;
+    gap: 40px;
 }
 @media screen and (max-width:768px){
    .media{
